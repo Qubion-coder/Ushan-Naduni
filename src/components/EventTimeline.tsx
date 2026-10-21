@@ -51,7 +51,7 @@ export function EventTimeline() {
                 <motion.div
                   whileInView={{ scale: [0, 1.2, 1] }}
                   transition={{ duration: 0.5, delay: index * 0.2 }}
-                  className="w-6 h-6 rounded-full bg-white border-4 border-[var(--color-brand-plum)] shadow-[0_0_15px_rgba(98,114,84,0.4)] flex items-center justify-center"
+                  className="w-6 h-6 rounded-full bg-white border-4 border-[var(--color-brand-plum)] shadow-[0_0_15px_rgba(122,10,28,0.4)] flex items-center justify-center"
                 >
                   <div className="w-1.5 h-1.5 rounded-full bg-[var(--color-brand-plum)] group-hover:scale-150 transition-transform" />
                 </motion.div>

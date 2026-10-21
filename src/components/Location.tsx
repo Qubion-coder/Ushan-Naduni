@@ -10,11 +10,11 @@ export const Location: React.FC<LocationProps> = ({ event = 'both' }) => {
   const venues = [
     {
       id: 'ceremony',
-      name: "The Epitome Hotel",
-      city: "Kurunegala, Sri Lanka",
-      quote: `"අපගේ ජීවිතයේ සුන්දරතම දිනය සැමරෙන ස්ථානය"`,
-      liveLocationUrl: "https://maps.app.goo.gl/H5gj3nYvdjNJU4y86",
-      imageUrl: "https://q-xx.bstatic.com/xdata/images/hotel/1200x630/479073392.jpg?k=0f268309279e9891f97c63561f9a78a566867cb6b6daa795053b29b6cdb3bd8c&o=",
+      name: "Astrologer Ajith Lokuge",
+      city: "Sri Jayawardenepura Kotte, Sri Lanka",
+      quote: `"අප නිවසේ පැවැත්වෙන ගෙදර ඒමේ සොඳුරු උත්සවය"`,
+      liveLocationUrl: "https://maps.google.com/?cid=6540073415476849221",
+      mapEmbedUrl: "https://maps.google.com/maps?q=Astrologer%20Ajith%20Lokuge%2C%20Sri%20Jayawardenepura%20Kotte&z=16&output=embed",
       label: "The Venue"
     }
   ];
@@ -38,7 +38,7 @@ export const Location: React.FC<LocationProps> = ({ event = 'both' }) => {
                 transition={{ duration: 1.2, ease: "easeOut" }}
                 className={`w-full lg:w-[45%] flex z-20 ${isReversed ? 'lg:-translate-x-12' : 'lg:translate-x-12'}`}
               >
-                <div className="w-full h-full bg-white/90 backdrop-blur-2xl p-10 sm:p-14 lg:p-16 rounded-[2.5rem] shadow-[0_30px_60px_rgba(176,137,104,0.15)] border border-brand-lavender/30 relative overflow-hidden group flex flex-col justify-center">
+                <div className="w-full h-full bg-white/90 backdrop-blur-2xl p-10 sm:p-14 lg:p-16 rounded-[2.5rem] shadow-[0_30px_60px_rgba(122,10,28,0.15)] border border-brand-lavender/30 relative overflow-hidden group flex flex-col justify-center">
                   
                   {/* Elegant top border gradient */}
                   <div className="absolute top-0 left-0 w-full h-2 bg-gradient-to-r from-brand-rose via-brand-lavender to-brand-plum" />
@@ -52,7 +52,7 @@ export const Location: React.FC<LocationProps> = ({ event = 'both' }) => {
                     </div>
 
                     <h2 className="text-5xl sm:text-6xl font-sinhala text-stone-800 mb-6 leading-tight drop-shadow-sm">
-                      මංගල <br />
+                      ගෙදර ඒමේ <br />
                       <span className="italic font-light text-brand-plum">උත්සවය</span>
                     </h2>
 
@@ -88,36 +88,41 @@ export const Location: React.FC<LocationProps> = ({ event = 'both' }) => {
                 </div>
               </motion.div>
 
-              {/* Stunning Image Frame */}
+              {/* Embedded Live Map */}
               <motion.div 
                 initial={{ opacity: 0, scale: 0.95 }}
                 whileInView={{ opacity: 1, scale: 1 }}
                 viewport={{ once: true }}
                 transition={{ duration: 1.2, delay: 0.2, ease: "easeOut" }}
-                className="w-full lg:w-[65%] aspect-video sm:h-[350px] lg:aspect-auto lg:h-auto lg:min-h-[600px] relative z-10"
+                className="w-full lg:w-[65%] relative z-10 flex flex-col gap-6"
               >
-                <div className="absolute -inset-4 sm:-inset-6 border-[2px] border-brand-lavender/30 rounded-[3rem] -z-10 translate-x-2 sm:translate-x-4 translate-y-2 sm:translate-y-4" />
-                
-                <a 
-                  href={venue.liveLocationUrl}
-                  target="_blank"
-                  rel="noreferrer"
-                  className="w-full h-full block rounded-[2.5rem] lg:rounded-[3rem] overflow-hidden shadow-[0_20px_50px_rgba(0,0,0,0.15)] relative group/map"
-                >
-                  {/* Image Placeholder Masking for premium feel */}
-                  <div className="absolute inset-0 bg-brand-lavender/10 mix-blend-multiply pointer-events-none z-20 group-hover/map:opacity-0 transition-opacity duration-1000" />
-                  
-                  <img
-                    src={venue.imageUrl}
-                    alt={`${venue.name} Location`}
-                    className="absolute inset-0 w-full h-full object-cover transition-transform duration-[2s] ease-in-out group-hover/map:scale-105"
+                <div className="absolute -inset-4 sm:-inset-6 border-[2px] border-white/30 rounded-[3rem] -z-10 translate-x-2 sm:translate-x-4 translate-y-2 sm:translate-y-4" />
+
+                <div className="w-full h-[350px] sm:h-[450px] lg:h-auto lg:flex-1 lg:min-h-[540px] rounded-[2.5rem] lg:rounded-[3rem] overflow-hidden shadow-[0_20px_50px_rgba(0,0,0,0.25)] relative bg-white">
+                  <iframe
+                    src={venue.mapEmbedUrl}
+                    title={`${venue.name} Map`}
+                    className="absolute inset-0 w-full h-full border-0"
+                    loading="lazy"
+                    referrerPolicy="no-referrer-when-downgrade"
+                    allowFullScreen
                   />
 
-                  {/* Decorative Location Pin Overlay */}
+                  {/* Live Map Badge */}
                   <div className="absolute top-6 right-6 bg-white/90 backdrop-blur-md px-4 py-2 rounded-full border border-brand-lavender/30 shadow-lg flex items-center gap-2 pointer-events-none z-30">
                     <Map className="w-4 h-4 text-brand-plum animate-pulse" />
                     <span className="text-[9px] uppercase tracking-widest font-bold text-stone-600">Live Map</span>
                   </div>
+                </div>
+
+                <a
+                  href={venue.liveLocationUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="self-center inline-flex items-center gap-3 bg-white text-brand-plum px-10 py-4 rounded-full font-sans font-bold tracking-[0.2em] text-xs uppercase shadow-[0_10px_25px_rgba(0,0,0,0.25)] hover:bg-brand-rose transition-all duration-300 active:scale-95 group/live"
+                >
+                  <Navigation className="w-4 h-4 group-hover/live:rotate-45 transition-transform duration-300" />
+                  Open Live Map
                 </a>
               </motion.div>
 

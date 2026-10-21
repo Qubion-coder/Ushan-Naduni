@@ -2,11 +2,11 @@
 @import "tailwindcss";
 
 @theme {
-  /* Beige & Sage Green Color Palette */
-  --color-brand-plum: #627254;
-  --color-brand-lavender: #A0B092;
-  --color-brand-rose: #D4DEC9;
-  --color-brand-blush: #F9F6F0;
+  /* Dark Red (Maroon) Color Palette */
+  --color-brand-plum: #7A0A1C;
+  --color-brand-lavender: #A3283A;
+  --color-brand-rose: #E9C4C8;
+  --color-brand-blush: #F8ECEC;
 
   --font-serif: "Cormorant Garamond", serif;
   --font-display: "Great Vibes", cursive;
@@ -20,6 +20,27 @@
 :root {
   background-color: var(--color-brand-blush);
   color: #292524;
+}
+
+/* Full red section: flips text to white/blush */
+.section-red {
+  background: linear-gradient(160deg, #7A0A1C 0%, #5C0714 100%);
+}
+.section-red :is(h1, h2, h3, h4, p, span, a) {
+  color: #ffffff !important;
+}
+.section-red :is(h2, h3) span,
+.section-red p.text-brand-plum {
+  color: #FBD3D7 !important;
+}
+.section-red svg {
+  color: #ffffff;
+}
+.section-red .bg-white svg {
+  color: var(--color-brand-plum);
+}
+.section-red .border-brand-lavender\/30 {
+  border-color: rgba(255, 255, 255, 0.4);
 }
 
 html, body {

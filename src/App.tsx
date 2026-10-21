@@ -24,9 +24,9 @@ export default function App() {
     ? `${nameParam} and Family`.trim()
     : `${titleParam} ${nameParam}`.trim();
 
-  let eventLabel = 'Our Wedding Celebration';
+  let eventLabel = 'Our Homecoming Celebration';
 
-  const weddingDate = new Date('2026-10-29T09:00:00');
+  const weddingDate = new Date('2026-12-12T17:00:00');
 
   useEffect(() => {
     if (isAdminRoute()) return;

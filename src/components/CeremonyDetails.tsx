@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'motion/react';
-import { Clock, Calendar, MapPin, Heart, Sparkles, Palette, Utensils } from 'lucide-react';
+import { Clock, Calendar, MapPin, Phone } from 'lucide-react';
 
 interface CeremonyDetailsProps {
   event?: string | null;
@@ -25,17 +25,20 @@ export const CeremonyDetails: React.FC<CeremonyDetailsProps> = ({ event = 'both'
           >
             <div className="inline-flex items-center gap-4 mb-6">
               <span className="text-brand-plum uppercase tracking-[0.4em] sm:tracking-[0.5em] text-[11px] sm:text-xs font-bold drop-shadow-sm">
-                The Sacred Union
+                The Homecoming
               </span>
               <div className="w-12 sm:w-20 h-[1px] bg-gradient-to-r from-brand-plum/60 to-transparent" />
             </div>
 
             <h2 className="text-5xl sm:text-6xl lg:text-7xl font-sinhala text-stone-800 mb-8 leading-[1.1] drop-shadow-sm">
-                <>විවාහ <br /><span className="italic font-light text-brand-plum">උත්සවය</span></>
+                <>ගෙදර ඒමේ <br /><span className="italic font-light text-brand-plum">උත්සවය</span></>
             </h2>
 
-            <p className="text-stone-500/90 font-sinhala text-lg sm:text-xl leading-relaxed mb-16 max-w-lg">
-                අපගේ මේ සුන්දර දිනයට ඔබගේ ආශිර්වාදය ලබා දීමට පැමිණෙන මෙන් ආදරයෙන් ආරාධනා කර සිටිමු.
+            <p className="text-stone-500/90 font-sinhala text-lg sm:text-xl leading-relaxed mb-6 max-w-lg">
+                උෂාන් සහ නදුනි යන දෙපළ එකම කැදැල්ලක යුග දිවිය ආරම්භ කිරීම සඳහා සම්මුඛ කරමින් අප නිවසේ පැවැත්වෙන ගෙදර ඒමේ සොඳුරු උත්සවයට, අපගේ පවුලේ සමීප ඥාති, හිතමිතුරු පවුලක් ලෙස ඔබට / ඔබ දෙපළට / ඔබ සැමට සහභාගි වන ලෙස ඉතා ගෞරවයෙන් ආරාධනා කරමු.
+            </p>
+            <p className="text-brand-plum font-sinhala text-base sm:text-lg leading-relaxed mb-16 max-w-lg">
+                අජිත් ලොකුගේ මහතා, ජීවන්ති කුමාරි ලොකුගේ මහත්මිය
             </p>
 
             {/* Premium Timeline */}
@@ -43,48 +46,48 @@ export const CeremonyDetails: React.FC<CeremonyDetailsProps> = ({ event = 'both'
 
               {/* Date */}
               <div className="relative group flex items-center min-h-[48px]">
-                <div className="absolute top-1/2 -translate-y-1/2 -left-[64px] sm:-left-[74px] w-12 h-12 bg-white rounded-full border border-brand-lavender/40 shadow-lg flex items-center justify-center group-hover:border-brand-plum group-hover:shadow-[0_4px_15px_rgba(176,137,104,0.3)] transition-all duration-500">
+                <div className="absolute top-1/2 -translate-y-1/2 -left-[64px] sm:-left-[74px] w-12 h-12 bg-white rounded-full border border-brand-lavender/40 shadow-lg flex items-center justify-center group-hover:border-brand-plum group-hover:shadow-[0_4px_15px_rgba(122,10,28,0.3)] transition-all duration-500">
                   <Calendar className="w-5 h-5 text-brand-plum group-hover:scale-110 transition-transform duration-500" />
                 </div>
                 <div>
                   <h4 className="font-sinhala text-2xl sm:text-3xl text-stone-800 group-hover:text-brand-plum transition-colors duration-500">
-                    දිනය: 2026 ඔක්තෝබර් 29
+                    දිනය: 2026 දෙසැම්බර් 12 (සිකුරාදා)
                   </h4>
                 </div>
               </div>
 
               {/* Location */}
               <div className="relative group flex items-center min-h-[48px]">
-                <div className="absolute top-1/2 -translate-y-1/2 -left-[64px] sm:-left-[74px] w-12 h-12 bg-white rounded-full border border-brand-lavender/40 shadow-lg flex items-center justify-center group-hover:border-brand-plum group-hover:shadow-[0_4px_15px_rgba(176,137,104,0.3)] transition-all duration-500">
+                <div className="absolute top-1/2 -translate-y-1/2 -left-[64px] sm:-left-[74px] w-12 h-12 bg-white rounded-full border border-brand-lavender/40 shadow-lg flex items-center justify-center group-hover:border-brand-plum group-hover:shadow-[0_4px_15px_rgba(122,10,28,0.3)] transition-all duration-500">
                   <MapPin className="w-5 h-5 text-brand-plum group-hover:scale-110 transition-transform duration-500" />
                 </div>
                 <div>
                   <h4 className="font-sinhala text-2xl sm:text-3xl text-stone-800 leading-relaxed group-hover:text-brand-plum transition-colors duration-500">
-                    <span className="font-semibold text-stone-700">ස්ථානය:</span> The Epitome, <br className="hidden sm:block" /> Kurunegala
+                    <span className="font-semibold text-stone-700">ස්ථානය:</span> අප නිවස, <br className="hidden sm:block" /> ශ්‍රී ජයවර්ධනපුර කෝට්ටේ
                   </h4>
                 </div>
               </div>
 
               {/* Time */}
               <div className="relative group flex items-center min-h-[48px]">
-                <div className="absolute top-1/2 -translate-y-1/2 -left-[64px] sm:-left-[74px] w-12 h-12 bg-white rounded-full border border-brand-lavender/40 shadow-lg flex items-center justify-center group-hover:border-brand-plum group-hover:shadow-[0_4px_15px_rgba(176,137,104,0.3)] transition-all duration-500">
+                <div className="absolute top-1/2 -translate-y-1/2 -left-[64px] sm:-left-[74px] w-12 h-12 bg-white rounded-full border border-brand-lavender/40 shadow-lg flex items-center justify-center group-hover:border-brand-plum group-hover:shadow-[0_4px_15px_rgba(122,10,28,0.3)] transition-all duration-500">
                   <Clock className="w-5 h-5 text-brand-plum group-hover:scale-110 transition-transform duration-500" />
                 </div>
                 <div>
                   <h4 className="font-sinhala text-2xl sm:text-3xl text-stone-800 leading-relaxed group-hover:text-brand-plum transition-colors duration-500">
-                    <span className="font-semibold text-stone-700">වේලාව:</span> 9.00 AM - 4.00 PM
+                    <span className="font-semibold text-stone-700">වේලාව:</span> සවස 5.00 සිට රාත්‍රී 12.00 දක්වා
                   </h4>
                 </div>
               </div>
 
-              {/* Poruwa Ceremony */}
+              {/* Inquiries */}
               <div className="relative group flex items-center min-h-[48px]">
-                <div className="absolute top-1/2 -translate-y-1/2 -left-[64px] sm:-left-[74px] w-12 h-12 bg-white rounded-full border border-brand-lavender/40 shadow-lg flex items-center justify-center group-hover:border-brand-plum group-hover:shadow-[0_4px_15px_rgba(176,137,104,0.3)] transition-all duration-500">
-                  <Sparkles className="w-5 h-5 text-brand-plum group-hover:scale-110 transition-transform duration-500" />
+                <div className="absolute top-1/2 -translate-y-1/2 -left-[64px] sm:-left-[74px] w-12 h-12 bg-white rounded-full border border-brand-lavender/40 shadow-lg flex items-center justify-center group-hover:border-brand-plum group-hover:shadow-[0_4px_15px_rgba(122,10,28,0.3)] transition-all duration-500">
+                  <Phone className="w-5 h-5 text-brand-plum group-hover:scale-110 transition-transform duration-500" />
                 </div>
                 <div>
                   <h4 className="font-sinhala text-2xl sm:text-3xl text-stone-800 leading-relaxed group-hover:text-brand-plum transition-colors duration-500">
-                    <span className="font-semibold text-stone-700">පෝරුවේ චාරිත්‍ර:</span> 10.00 AM
+                    <span className="font-semibold text-stone-700">විමසීම්:</span> <a href="tel:0778892039" className="hover:underline">077 889 2039</a> / <a href="tel:0768777512" className="hover:underline">076 877 7512</a>
                   </h4>
                 </div>
               </div>

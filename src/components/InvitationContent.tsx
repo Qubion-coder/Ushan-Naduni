@@ -48,7 +48,7 @@ export function InvitationContent({
         animate={{ opacity: 1, scale: 1 }}
         transition={{ delay: 0.5, duration: 0.6 }}
         onClick={onToggleMusic}
-        className="fixed top-6 right-6 z-50 w-12 sm:w-14 h-12 sm:h-14 bg-white/70 backdrop-blur-md rounded-full shadow-[0_8px_30px_rgba(176,137,104,0.15)] flex items-center justify-center border border-brand-lavender/50 text-brand-plum hover:scale-105 transition-all duration-300"
+        className="fixed top-6 right-6 z-50 w-12 sm:w-14 h-12 sm:h-14 bg-white/70 backdrop-blur-md rounded-full shadow-[0_8px_30px_rgba(122,10,28,0.15)] flex items-center justify-center border border-brand-lavender/50 text-brand-plum hover:scale-105 transition-all duration-300"
       >
         {isMusicPlaying ? (
           <Music className="w-5 h-5 sm:w-6 sm:h-6" />
@@ -75,13 +75,13 @@ export function InvitationContent({
 
 
       <DeferredMount active={active} delay={180} minHeight="40vh">
-        <div className="py-24 sm:py-32 bg-white relative overflow-hidden">
+        <div className="py-24 sm:py-32 section-red relative overflow-hidden">
           <CeremonyDetails event={eventParam} />
         </div>
       </DeferredMount>
 
       <DeferredMount active={active} delay={240} minHeight="40vh">
-        <div className="pt-24 pb-12 sm:py-32 bg-gradient-to-b from-white via-brand-rose/30 to-brand-blush relative overflow-hidden">
+        <div className="pt-24 pb-12 sm:py-32 bg-gradient-to-br from-[#7A0A1C] to-[#5C0714] relative overflow-hidden">
           <Location event={eventParam} />
         </div>
       </DeferredMount>
@@ -122,7 +122,7 @@ export function InvitationContent({
 
       <DeferredMount active={active} delay={500} minHeight="40vh">
         <div className="py-16 sm:py-24 bg-white relative overflow-hidden flex justify-center items-center px-4">
-          <div className="w-full max-w-5xl rounded-[2.5rem] overflow-hidden shadow-[0_20px_50px_rgba(176,137,104,0.15)] border border-brand-lavender/30">
+          <div className="w-full max-w-5xl rounded-[2.5rem] overflow-hidden shadow-[0_20px_50px_rgba(122,10,28,0.15)] border border-brand-lavender/30">
             <video 
               src="/Couple_saying_goodbye_202608130003%20(online-video-cutter.com).mp4"
               autoPlay 
@@ -136,13 +136,13 @@ export function InvitationContent({
       </DeferredMount>
 
       <DeferredMount active={active} delay={520}>
-        <footer className="py-12 bg-white border-t border-brand-lavender/20 text-center relative overflow-hidden mt-10">
+        <footer className="py-12 section-red text-center relative overflow-hidden mt-10">
           <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-64 h-64 bg-brand-lavender/10 blur-[80px] rounded-full pointer-events-none" />
-          <Heart className="w-6 h-6 mx-auto mb-6 text-brand-plum fill-brand-lavender/20" />
-          <p className="font-names text-4xl sm:text-5xl text-stone-800 mb-1">Shakya & Supun</p>
-          <p className="font-sinhala text-2xl sm:text-3xl text-stone-700 mb-4">ශාක්‍යා සහ සුපුන්</p>
+          <Heart className="w-6 h-6 mx-auto mb-6 fill-white/20" />
+          <p className="font-names text-4xl sm:text-5xl text-stone-800 mb-1">Ushan & Naduni</p>
+          <p className="font-sinhala text-2xl sm:text-3xl text-stone-700 mb-4">උෂාන් සහ නදුනි</p>
           <p className="text-[11px] sm:text-xs font-serif uppercase tracking-[0.3em] font-medium text-stone-500 mb-6 drop-shadow-sm">
-            October 29, 2026
+            December 12, 2026
           </p>
           <p className="text-stone-400 text-xs mt-4 font-sans tracking-wider">
             Want a beautiful wedding website like this? Create yours with <a target="_blank" rel="noreferrer" className="text-brand-plum font-bold hover:text-brand-rose transition-colors underline decoration-brand-plum/30 hover:decoration-brand-rose" href="https://wa.me/94707819074">invitemint</a>

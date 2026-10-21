@@ -79,8 +79,8 @@ export function VideoIntro({
         }
 
         .view-invitation-btn {
-          background: #f0b9c3;
-          color: #4a3a4d;
+          background: #7A0A1C;
+          color: #ffffff;
           border: none;
           padding: 15px 40px;
           font-size: 18px;
@@ -88,7 +88,7 @@ export function VideoIntro({
           border-radius: 30px;
           cursor: pointer;
           transition: all 0.3s ease;
-          box-shadow: 0 10px 20px rgba(240, 185, 195, 0.4);
+          box-shadow: 0 10px 20px rgba(122,10,28, 0.45);
           text-transform: uppercase;
           letter-spacing: 2px;
           margin-top: auto;
@@ -98,8 +98,8 @@ export function VideoIntro({
 
         .view-invitation-btn:hover {
           transform: translateY(-2px);
-          background: #f8dbdf;
-          box-shadow: 0 12px 25px rgba(240, 185, 195, 0.6);
+          background: #5C0714;
+          box-shadow: 0 12px 25px rgba(122,10,28, 0.65);
         }
         
         .view-invitation-btn:active {
@@ -120,9 +120,9 @@ export function VideoIntro({
             />
             <div className="intro-overlay" />
             <div className="intro-content">
-              <div className="mt-12 mb-auto text-white drop-shadow-md">
-                <p className="uppercase tracking-[0.4em] text-xs sm:text-sm font-bold mb-2 opacity-90">Wedding Invitation</p>
-                <h1 className="font-names text-5xl sm:text-6xl lg:text-7xl drop-shadow-lg tracking-wide">Shakya & Supun</h1>
+              <div className="mt-12 mb-auto text-white drop-shadow-md flex flex-col items-center">
+                <p className="inline-block uppercase tracking-[0.4em] text-xs sm:text-sm font-bold mb-4 bg-[#5C0714] text-white px-6 py-2 rounded-full shadow-[0_8px_20px_rgba(92,7,20,0.45)]">Homecoming Invitation</p>
+                <h1 className="font-names text-5xl sm:text-6xl lg:text-7xl drop-shadow-lg tracking-wide">Ushan & Naduni</h1>
               </div>
               <button className="view-invitation-btn" onClick={handleEnter}>
                 View Invitation

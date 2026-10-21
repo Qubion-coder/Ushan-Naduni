@@ -21,9 +21,9 @@ export const CoupleDetails: React.FC = () => {
             <div className="w-12 sm:w-20 h-[1px] bg-gradient-to-l from-transparent to-brand-plum/60" />
           </div>
           <h2 className="text-5xl sm:text-7xl font-names text-stone-800 tracking-tight drop-shadow-sm">
-            Shakya <span className="text-brand-plum font-light mx-2">&</span> Supun
+            Ushan <span className="text-brand-plum font-light mx-2">&</span> Naduni
             <div className="text-3xl sm:text-5xl mt-4 font-sinhala text-stone-800 drop-shadow-sm">
-              ශාක්‍යා සහ සුපුන්
+              උෂාන් සහ නදුනි
             </div>
           </h2>
         </motion.div>
@@ -40,16 +40,20 @@ export const CoupleDetails: React.FC = () => {
         >
           <div className="mb-4 flex flex-col items-center lg:items-end">
             <span className="text-brand-plum uppercase tracking-[0.4em] text-[10px] font-bold mb-3 block">The Groom</span>
-            <h3 className="text-4xl sm:text-5xl font-names text-stone-800 mb-1 drop-shadow-sm">Supun</h3>
-            <h4 className="text-2xl sm:text-3xl font-sinhala text-stone-700 mb-3 drop-shadow-sm">සුපුන් සංජීව</h4>
             <p className="text-stone-500/90 font-sans text-xs sm:text-sm text-center lg:text-right">
-              Aththidiya Vidanalage Don Thilak Rohitha Kumara &<br/>
-              Jasinliyanage Dona Achala Kamini Wijegunasekara
+              Mr. Ajith Lokuge &<br/>
+              Mrs. Jeewanthi Kumari Lokuge
             </p>
-            <p className="text-stone-500/90 font-sinhala text-sm sm:text-base mt-2 text-center lg:text-right">
-              අත්තිඩිය විදානලාගේ දොන් තිලක් රෝහිත කුමාර සහ<br/>
-              ජාසින්ලියනගේ දෝන අචලා කාමිනී විජේගුණසේකරගේ<br/>
-              ආදරණීය පුත්,
+            <p className="text-stone-500/90 font-sinhala text-sm sm:text-base mt-2 mb-4 text-center lg:text-right">
+              ශ්‍රී ජයවර්ධනපුර කෝට්ටේ පදිංචි<br/>
+              අජිත් ලොකුගේ මහතාගේ සහ<br/>
+              ජීවන්ති කුමාරි ලොකුගේ මහත්මියගේ<br/>
+              ජ්‍යෙෂ්ඨ පුත්‍ර
+            </p>
+            <h3 className="text-4xl sm:text-5xl font-names text-stone-800 mb-1 drop-shadow-sm">Ushan</h3>
+            <h4 className="text-3xl sm:text-4xl font-sinhala font-bold text-brand-plum drop-shadow-sm">උෂාන් විරාජ් ලොකුගේ</h4>
+            <p className="text-brand-plum font-sinhala text-sm sm:text-base mt-3 text-center lg:text-right">
+              (ප්‍රවීණ ජ්‍යොතිෂවේදී / වෛද්‍ය MBBS)
             </p>
           </div>
           <div className="hidden lg:flex justify-end mt-8">
@@ -70,16 +74,20 @@ export const CoupleDetails: React.FC = () => {
         >
           <div className="mb-4 flex flex-col items-center lg:items-start">
             <span className="text-brand-plum uppercase tracking-[0.4em] text-[10px] font-bold mb-3 block">The Bride</span>
-            <h3 className="text-4xl sm:text-5xl font-names text-stone-800 mb-1 drop-shadow-sm">Shakya</h3>
-            <h4 className="text-2xl sm:text-3xl font-sinhala text-stone-700 mb-3 drop-shadow-sm">නෙත්මි ශාක්‍යා හේරත්</h4>
             <p className="text-stone-500/90 font-sans text-xs sm:text-sm text-center lg:text-left">
-              Herath Bandara Mudiyanselage Chaminda Pushpakumara Herath &<br/>
-              Dompege Shalika Madushini Siriwardana
+              Mr. Samantha Liyanage &<br/>
+              Mrs. Chandika Liyanage
             </p>
-            <p className="text-stone-500/90 font-sinhala text-sm sm:text-base mt-2 text-center lg:text-left">
-              හේරත් බංඩාර මුදියන්සේලාගේ චමින්ද පුෂ්පකුමාර හේරත් සහ<br/>
-              දොම්පේගේ ශාලිකා මදුෂිණි සිරිවර්ධනගේ<br/>
+            <p className="text-stone-500/90 font-sinhala text-sm sm:text-base mt-2 mb-4 text-center lg:text-left">
+              ගංගොඩවිල, නුගේගොඩ පදිංචි<br/>
+              සමන්ත ලියනගේ මහතාගේ සහ<br/>
+              චන්දිකා ලියනගේ මහත්මියගේ<br/>
               ආදරණීය දියණිය,
+            </p>
+            <h3 className="text-4xl sm:text-5xl font-names text-stone-800 mb-1 drop-shadow-sm">Naduni</h3>
+            <h4 className="text-3xl sm:text-4xl font-sinhala font-bold text-brand-plum drop-shadow-sm">නදුනි යශෝධරා ලියනගේ</h4>
+            <p className="text-brand-plum font-sans text-xs sm:text-sm mt-3 text-center lg:text-left">
+              (Manager in Financial Consulting)
             </p>
           </div>
           <div className="hidden lg:flex justify-start mt-8">
