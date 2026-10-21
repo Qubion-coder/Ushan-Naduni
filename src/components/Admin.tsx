@@ -100,7 +100,7 @@ With love,
             Wedding <span className="italic font-light text-brand-plum">Admin Panel</span>
           </h1>
           <p className="text-stone-500 font-serif italic text-lg max-w-xl mx-auto">
-            Generate personalized invitation links for your guests with specific event access.
+            Generate personalized invitation links for your guests.
           </p>
         </div>
 

@@ -1,35 +1,39 @@
-const SPREADSHEET_ID = '1IYsTHUnfOIHGcwQvoTcjOc5X2wKZJDIrqxqxXtpVpZY';
+// Ushan & Naduni Homecoming — RSVP & Wishes endpoint
+// Sheet: https://docs.google.com/spreadsheets/d/1TzBkgc0OIzQa-DdZ1Fhjl-nA1Fc3lL4bCVZXvoSkH-M/edit
+const SPREADSHEET_ID = '1TzBkgc0OIzQa-DdZ1Fhjl-nA1Fc3lL4bCVZXvoSkH-M';
+
+// Each form gets its own tab. Tabs + headers are created automatically.
+const SHEETS = {
+  RSVP: {
+    name: 'RSVP',
+    headers: ['Timestamp', 'Full Name', 'Guests', 'Notes'],
+    row: (p) => [new Date(), p.fullName || '', p.guests || '', p.dietaryNotes || ''],
+  },
+  WISH: {
+    name: 'Wishes',
+    headers: ['Timestamp', 'Name', 'Message'],
+    row: (p) => [new Date(), p.name || '', p.message || ''],
+  },
+};
+
+const HEADER_BG = '#7A0A1C';
+const HEADER_FG = '#FFFFFF';
 
 function doPost(e) {
+  const lock = LockService.getScriptLock();
   try {
-    const payload = parsePayload_(e);
-    const sheetKey = String(payload.sheet || '').toUpperCase();
+    lock.waitLock(10000);
 
-    if (sheetKey !== 'RSVP' && sheetKey !== 'WISH') {
+    const payload = parsePayload_(e);
+    const config = SHEETS[String(payload.sheet || '').toUpperCase()];
+
+    if (!config) {
       return jsonResponse_({ ok: false, error: 'Invalid sheet. Use RSVP or WISH.' });
     }
 
     const ss = SpreadsheetApp.openById(SPREADSHEET_ID);
-    const sheet = getOrCreateSheet_(ss, sheetKey);
-
-    if (sheetKey === 'RSVP') {
-      ensureHeaders_(sheet, ['Timestamp', 'Full Name', 'Guests', 'Event', 'Dietary Notes']);
-      sheet.appendRow([
-        new Date(),
-        payload.fullName || '',
-        payload.guests || '',
-        payload.event || '',
-        payload.dietaryNotes || '',
-      ]);
-    } else {
-      ensureHeaders_(sheet, ['Timestamp', 'Name', 'Event', 'Message']);
-      sheet.appendRow([
-        new Date(),
-        payload.name || '',
-        payload.event || '',
-        payload.message || '',
-      ]);
-    }
+    const sheet = getOrCreateSheet_(ss, config);
+    sheet.appendRow(config.row(payload));
 
     return jsonResponse_({ ok: true });
   } catch (error) {
@@ -37,14 +41,41 @@ function doPost(e) {
       ok: false,
       error: String(error && error.message ? error.message : error),
     });
+  } finally {
+    lock.releaseLock();
   }
 }
 
 function doGet() {
   return jsonResponse_({
     ok: true,
-    message: 'Wedding form endpoint is running.',
+    message: 'Ushan & Naduni homecoming form endpoint is running.',
   });
+}
+
+// Optional: run once from the Apps Script editor to create both tabs now.
+function setupSheets() {
+  const ss = SpreadsheetApp.openById(SPREADSHEET_ID);
+  Object.keys(SHEETS).forEach((key) => getOrCreateSheet_(ss, SHEETS[key]));
+}
+
+function getOrCreateSheet_(ss, config) {
+  let sheet = ss.getSheetByName(config.name);
+  if (!sheet) {
+    sheet = ss.insertSheet(config.name);
+  }
+  if (sheet.getLastRow() === 0) {
+    const header = sheet.getRange(1, 1, 1, config.headers.length);
+    header
+      .setValues([config.headers])
+      .setFontWeight('bold')
+      .setBackground(HEADER_BG)
+      .setFontColor(HEADER_FG);
+    sheet.setFrozenRows(1);
+    sheet.getRange('A:A').setNumberFormat('yyyy-mm-dd hh:mm');
+    sheet.autoResizeColumns(1, config.headers.length);
+  }
+  return sheet;
 }
 
 function parsePayload_(e) {
@@ -88,20 +119,6 @@ function parseQueryString_(query) {
   }
 
   return out;
-}
-
-function getOrCreateSheet_(ss, name) {
-  let sheet = ss.getSheetByName(name);
-  if (!sheet) {
-    sheet = ss.insertSheet(name);
-  }
-  return sheet;
-}
-
-function ensureHeaders_(sheet, headers) {
-  if (sheet.getLastRow() === 0) {
-    sheet.appendRow(headers);
-  }
 }
 
 function jsonResponse_(data) {
