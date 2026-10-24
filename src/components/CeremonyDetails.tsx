@@ -31,14 +31,14 @@ export const CeremonyDetails: React.FC<CeremonyDetailsProps> = ({ event = 'both'
             </div>
 
             <h2 className="text-5xl sm:text-6xl lg:text-7xl font-sinhala text-stone-800 mb-8 leading-[1.1] drop-shadow-sm">
-                <>ගෙදර ඒමේ <br /><span className="italic font-light text-brand-plum">උත්සවය</span></>
+                <>ගෙදරට පැමිණීමේ <br /><span className="italic font-light text-brand-plum">උත්සවය</span></>
             </h2>
 
             <p className="text-stone-500/90 font-sinhala text-lg sm:text-xl leading-relaxed mb-6 max-w-lg">
-                උෂාන් සහ නදුනි යන දෙපළ එකම කැදැල්ලක යුග දිවිය ආරම්භ කිරීම සඳහා සම්මුඛ කරමින් අප නිවසේ පැවැත්වෙන ගෙදර ඒමේ සොඳුරු උත්සවයට, අපගේ පවුලේ සමීප ඥාති, හිතමිතුරු පවුලක් ලෙස ඔබට / ඔබ දෙපළට / ඔබ සැමට සහභාගි වන ලෙස ඉතා ගෞරවයෙන් ආරාධනා කරමු.
+                උෂාන් සහ නඳුනි යන දෙපළ එකම කැදැල්ලක යුග දිවිය ආරම්භ කිරීම සඳහා සම්මුඛ කරමින් අප නිවසේ පැවැත්වෙන ගෙදරට පැමිණීමේ සොඳුරු උත්සවයට, අපගේ පවුලේ සමීප ඥාති, හිතමිතුරු පවුලක් ලෙස ඔබට / ඔබ දෙපළට / ඔබ සැමට සහභාගි වන ලෙස ඉතා ගෞරවයෙන් ආරාධනා කරමු.
             </p>
             <p className="text-brand-plum font-sinhala text-base sm:text-lg leading-relaxed mb-16 max-w-lg">
-                අජිත් ලොකුගේ මහතා, ජීවන්ති කුමාරි ලොකුගේ මහත්මිය
+                අජිත් ලොකුගේ මහතා, ජීවන්ති කුමරි ලොකුගේ මහත්මිය
             </p>
 
             {/* Premium Timeline */}
@@ -51,7 +51,7 @@ export const CeremonyDetails: React.FC<CeremonyDetailsProps> = ({ event = 'both'
                 </div>
                 <div>
                   <h4 className="font-sinhala text-2xl sm:text-3xl text-stone-800 group-hover:text-brand-plum transition-colors duration-500">
-                    දිනය: 2026 දෙසැම්බර් 12 (සිකුරාදා)
+                    දිනය: 2026 දෙසැම්බර් 12 (සෙනසුරාදා)
                   </h4>
                 </div>
               </div>
@@ -63,7 +63,7 @@ export const CeremonyDetails: React.FC<CeremonyDetailsProps> = ({ event = 'both'
                 </div>
                 <div>
                   <h4 className="font-sinhala text-2xl sm:text-3xl text-stone-800 leading-relaxed group-hover:text-brand-plum transition-colors duration-500">
-                    <span className="font-semibold text-stone-700">ස්ථානය:</span> අප නිවස, <br className="hidden sm:block" /> ශ්‍රී ජයවර්ධනපුර කෝට්ටේ
+                    <span className="font-semibold text-stone-700">ස්ථානය:</span> 347A, Iriyagolla Villas, <br className="hidden sm:block" /> Sri Jayawardhanapura Kotte 10250
                   </h4>
                 </div>
               </div>

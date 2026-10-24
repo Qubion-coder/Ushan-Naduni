@@ -23,7 +23,7 @@ export const CoupleDetails: React.FC = () => {
           <h2 className="text-5xl sm:text-7xl font-names text-stone-800 tracking-tight drop-shadow-sm">
             Ushan <span className="text-brand-plum font-light mx-2">&</span> Naduni
             <div className="text-3xl sm:text-5xl mt-4 font-sinhala text-stone-800 drop-shadow-sm">
-              උෂාන් සහ නදුනි
+              උෂාන් සහ නඳුනි
             </div>
           </h2>
         </motion.div>
@@ -47,7 +47,7 @@ export const CoupleDetails: React.FC = () => {
             <p className="text-stone-500/90 font-sinhala text-sm sm:text-base mt-2 mb-4 text-center lg:text-right">
               ශ්‍රී ජයවර්ධනපුර කෝට්ටේ පදිංචි<br/>
               අජිත් ලොකුගේ මහතාගේ සහ<br/>
-              ජීවන්ති කුමාරි ලොකුගේ මහත්මියගේ<br/>
+              ජීවන්ති කුමරි ලොකුගේ මහත්මියගේ<br/>
               ජ්‍යෙෂ්ඨ පුත්‍ර
             </p>
             <h3 className="text-4xl sm:text-5xl font-names text-stone-800 mb-1 drop-shadow-sm">Ushan</h3>
@@ -85,7 +85,7 @@ export const CoupleDetails: React.FC = () => {
               ආදරණීය දියණිය,
             </p>
             <h3 className="text-4xl sm:text-5xl font-names text-stone-800 mb-1 drop-shadow-sm">Naduni</h3>
-            <h4 className="text-3xl sm:text-4xl font-sinhala font-bold text-brand-plum drop-shadow-sm">නදුනි යශෝධරා ලියනගේ</h4>
+            <h4 className="text-3xl sm:text-4xl font-sinhala font-bold text-brand-plum drop-shadow-sm">නඳුනි යශෝධරා ලියනගේ</h4>
             <p className="text-brand-plum font-sans text-xs sm:text-sm mt-3 text-center lg:text-left">
               (Manager in Financial Consulting)
             </p>

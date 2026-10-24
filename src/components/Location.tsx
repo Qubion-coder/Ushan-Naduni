@@ -11,8 +11,8 @@ export const Location: React.FC<LocationProps> = ({ event = 'both' }) => {
     {
       id: 'ceremony',
       name: "Astrologer Ajith Lokuge",
-      city: "Sri Jayawardenepura Kotte, Sri Lanka",
-      quote: `"අප නිවසේ පැවැත්වෙන ගෙදර ඒමේ සොඳුරු උත්සවය"`,
+      city: "347A, Iriyagolla Villas, Sri Jayawardhanapura Kotte 10250",
+      quote: `"අප නිවසේ පැවැත්වෙන ගෙදරට පැමිණීමේ සොඳුරු උත්සවය"`,
       liveLocationUrl: "https://maps.google.com/?cid=6540073415476849221",
       mapEmbedUrl: "https://maps.google.com/maps?q=Astrologer%20Ajith%20Lokuge%2C%20Sri%20Jayawardenepura%20Kotte&z=16&output=embed",
       label: "The Venue"
@@ -52,7 +52,7 @@ export const Location: React.FC<LocationProps> = ({ event = 'both' }) => {
                     </div>
 
                     <h2 className="text-5xl sm:text-6xl font-sinhala text-stone-800 mb-6 leading-tight drop-shadow-sm">
-                      ගෙදර ඒමේ <br />
+                      ගෙදරට පැමිණීමේ <br />
                       <span className="italic font-light text-brand-plum">උත්සවය</span>
                     </h2>
 

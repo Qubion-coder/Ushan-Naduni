@@ -140,7 +140,7 @@ export function InvitationContent({
           <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-64 h-64 bg-brand-lavender/10 blur-[80px] rounded-full pointer-events-none" />
           <Heart className="w-6 h-6 mx-auto mb-6 fill-white/20" />
           <p className="font-names text-4xl sm:text-5xl text-stone-800 mb-1">Ushan & Naduni</p>
-          <p className="font-sinhala text-2xl sm:text-3xl text-stone-700 mb-4">උෂාන් සහ නදුනි</p>
+          <p className="font-sinhala text-2xl sm:text-3xl text-stone-700 mb-4">උෂාන් සහ නඳුනි</p>
           <p className="text-[11px] sm:text-xs font-serif uppercase tracking-[0.3em] font-medium text-stone-500 mb-6 drop-shadow-sm">
             December 12, 2026
           </p>

@@ -96,7 +96,7 @@ export const Hero: React.FC<HeroProps> = ({ event = 'both', inviteeName }) => {
               <br className="sm:hidden" />
               NADUNI
               <div className="text-3xl sm:text-6xl mt-4 sm:mt-6 font-sinhala text-[var(--color-brand-plum)] drop-shadow-[0_4px_12px_rgba(255,255,255,0.9)]">
-                උෂාන් සහ නදුනි
+                උෂාන් සහ නඳුනි
               </div>
             </h1>
           </div>
